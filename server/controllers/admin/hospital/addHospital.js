@@ -1,4 +1,4 @@
-const runQuery = require('../../../dbConn');
+const { pool } = require('../../../dbConn');
 const commonResponse = require('../../../helpers/index');
 
 const validateHospitalBody = (body) => {
@@ -26,6 +26,7 @@ const validateHospitalBody = (body) => {
 };
 
 const addHospital = async (req, res) => {
+  let client;
   try {
     if (validateHospitalBody(req.body)) {
       const {
@@ -43,14 +44,21 @@ const addHospital = async (req, res) => {
         state_id,
         user_id,
       } = req.body;
+
+      client = await pool.connect();
+
+      await client.query('BEGIN');
+
       const addressQuery = `insert into address (house, street, city, pincode, state_id) values('${house}', '${street}', '${city}', '${pincode}','${state_id}') RETURNING id`;
-      const addressResult = await runQuery(addressQuery);
+      const addressResult = await client.query(addressQuery);
 
       const HospitalQuery = `insert into hospitals (name, email, contact_no, hours_of_operation, diseases, website, address_id) values('${name}', '${email}', '${contactNo}','${hoursOfOperation}', '${diseases}','${website}','${addressResult.rows[0].id}') RETURNING id`;
-      const HospitalResult = await runQuery(HospitalQuery);
+      const HospitalResult = await client.query(HospitalQuery);
 
       const HospitalAdminQuery = `insert into hospital_admins (user_id, hospital_id) values('${user_id}', '${HospitalResult.rows[0].id}')`;
-      const HospitalAdminResult = await runQuery(HospitalAdminQuery);
+      const HospitalAdminResult = await client.query(HospitalAdminQuery);
+
+      await client.query('COMMIT');
 
       const output = { ...HospitalAdminResult.rows[0] };
       return commonResponse(res, 201, output, null);
@@ -58,7 +66,10 @@ const addHospital = async (req, res) => {
       throw new Error('Please fill all the required fields!');
     }
   } catch (err) {
+    await client.query('ROLLBACK');
     return commonResponse(res, 200, null, err.message);
+  } finally {
+    client.release();
   }
 };
 

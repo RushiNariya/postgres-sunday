@@ -1,4 +1,4 @@
-const runQuery = require('../../../dbConn');
+const { pool } = require('../../../dbConn');
 const commonResponse = require('../../../helpers/index');
 const { encryptPassword } = require('../../../utils/bcryptUtils');
 
@@ -29,6 +29,7 @@ const validateHospitalAdminBody = (body) => {
 };
 
 const editDoctor = async (req, res) => {
+  let client;
   try {
     if (validateHospitalAdminBody(req.body)) {
       const {
@@ -53,24 +54,24 @@ const editDoctor = async (req, res) => {
         throw new Error('doctorId not found!');
       }
 
+      client = await pool.connect();
+
+      await client.query('BEGIN');
+
       const UserQuery = `update users set firstname = '${firstname}', lastname='${lastname}', email='${email}', phone='${phone}', birthdate='${birthdate}' where id = '${doctorId}' RETURNING address_id, id`;
-      console.log(UserQuery);
-      const userResult = await runQuery(UserQuery);
+      const userResult = await client.query(UserQuery);
 
       if (!userResult.rows[0].id) {
         throw new Error('user not updated correctly!');
       }
-      // const userId = userResult.rows[0].id;
-      // console.log(userId);
 
       const doctorQuery = `update doctors set hospital_id = '${hospital}', education= '${education}', specialities= '${specilities}' where user_id = '${doctorId}'`;
-      console.log(doctorQuery);
-      // console.log(doctorQuery);
-      const result = await runQuery(doctorQuery);
+      const result = await client.query(doctorQuery);
 
       const addressQuery = `update address set house ='${house}', street ='${street}', city='${city}', pincode='${pincode}', state_id='${state_id}' where id = '${userResult.rows[0].address_id}'  RETURNING id`;
-      console.log(addressQuery);
-      const addressResult = await runQuery(addressQuery);
+      const addressResult = await client.query(addressQuery);
+
+      await client.query('COMMIT');
 
       const output = { ...result.rows[0] };
       return commonResponse(res, 201, output, null);
@@ -78,7 +79,10 @@ const editDoctor = async (req, res) => {
       throw new Error('Please fill all the required fields!');
     }
   } catch (err) {
+    await client.query('ROLLBACK');
     return commonResponse(res, 200, null, err.message);
+  } finally {
+    client.release();
   }
 };
 

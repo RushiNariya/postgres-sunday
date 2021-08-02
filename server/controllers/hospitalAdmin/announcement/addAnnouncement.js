@@ -1,4 +1,4 @@
-const runQuery = require('../../../dbConn');
+const { runQuery } = require('../../../dbConn');
 const commonResponse = require('../../../helpers/index');
 const { encryptPassword } = require('../../../utils/bcryptUtils');
 

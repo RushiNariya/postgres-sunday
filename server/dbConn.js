@@ -1,4 +1,4 @@
-const { Pool } = require("pg");
+const { Pool } = require('pg');
 
 console.log(process.env.DB_DATABASE);
 const pool = new Pool({
@@ -29,4 +29,4 @@ const runQuery = async (query) =>
     });
   });
 
-module.exports = runQuery;
+module.exports = { runQuery, pool };

@@ -8,6 +8,9 @@ const {
 const {
   getAllDoctors,
 } = require('../../controllers/admin/doctor/getAllDoctors');
+const {
+  getDoctorByHospitalId,
+} = require('../../controllers/admin/doctor/getDoctorByHospitalId');
 // const { ensureToken } = require('../utils/jwtUtils');
 
 const router = express.Router();
@@ -19,5 +22,6 @@ router.post('/add', addDoctor);
 // router.delete('/:id', deleteDoctor);
 router.put('/:id', editDoctor);
 router.get('/:id', getDoctorById);
+router.get('/hospital/:id', getDoctorByHospitalId);
 //---------------
 module.exports = router;

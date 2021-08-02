@@ -1,4 +1,4 @@
-const runQuery = require('../../../dbConn');
+const { pool } = require('../../../dbConn');
 const commonResponse = require('../../../helpers/index');
 const { encryptPassword } = require('../../../utils/bcryptUtils');
 
@@ -15,13 +15,19 @@ const validateNoteBody = (body) => {
 };
 
 const addNote = async (req, res) => {
+  let client;
   try {
     if (validateNoteBody(req.body)) {
       const { title, body, admin_id } = req.body;
 
-      const noteQuery = `insert into notes (title, body, admin_id) values('${title}', '${body}', '${admin_id}') RETURNING id`;
+      client = await pool.connect();
 
+      await client.query('BEGIN');
+
+      const noteQuery = `insert into notes (title, body, admin_id) values('${title}', '${body}', '${admin_id}') RETURNING id`;
       const result = await runQuery(noteQuery);
+
+      await client.query('COMMIT');
 
       const output = { ...result.rows[0] };
       return commonResponse(res, 201, output, null);
@@ -29,7 +35,10 @@ const addNote = async (req, res) => {
       throw new Error('Please fill all the required fields!');
     }
   } catch (err) {
+    await client.query('ROLLBACK');
     return commonResponse(res, 200, null, err.message);
+  } finally {
+    client.release();
   }
 };
 
