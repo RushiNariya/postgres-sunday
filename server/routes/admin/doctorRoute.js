@@ -1,27 +1,23 @@
 const express = require('express');
 // const userController = require('../controllers/users/registerUser');
-const { addDoctor } = require('../../controllers/admin/doctor/addDoctor');
-const { editDoctor } = require('../../controllers/admin/doctor/editDoctor');
+const { addDoctor } = require('../../controllers/doctor/addDoctor');
+const { editDoctor } = require('../../controllers/doctor/editDoctor');
+const { getDoctorById } = require('../../controllers/doctor/getDoctorById');
+const { getAllDoctors } = require('../../controllers/doctor/getAllDoctors');
 const {
-  getDoctorById,
-} = require('../../controllers/admin/doctor/getDoctorById');
-const {
-  getAllDoctors,
-} = require('../../controllers/admin/doctor/getAllDoctors');
-const {
-  getDoctorByHospitalId,
-} = require('../../controllers/admin/doctor/getDoctorByHospitalId');
-// const { ensureToken } = require('../utils/jwtUtils');
+    getDoctorByHospitalId,
+} = require('../../controllers/doctor/getDoctorByHospitalId');
+const { ensureToken } = require('../../utils/jwtUtils');
 
 const router = express.Router();
 
 // router.get('/category', getAllCategory);
 ///-------------------
-router.get('/', getAllDoctors);
-router.post('/add', addDoctor);
+router.get('/', ensureToken(['doctor:get']), getAllDoctors);
+router.post('/add', ensureToken(['doctor:post']), addDoctor);
 // router.delete('/:id', deleteDoctor);
-router.put('/:id', editDoctor);
-router.get('/:id', getDoctorById);
-router.get('/hospital/:id', getDoctorByHospitalId);
+router.put('/:id', ensureToken(['doctor:put']), editDoctor);
+router.get('/:id', ensureToken(['doctor:get']), getDoctorById);
+router.get('/hospital/:id', ensureToken(['doctor:get']), getDoctorByHospitalId);
 //---------------
 module.exports = router;

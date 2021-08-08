@@ -1,24 +1,22 @@
 const express = require('express');
 // const userController = require('../controllers/users/registerUser');
 const {
-  getAllPendingQueries,
-} = require('../../controllers/hospitalAdmin/query/getAllPendingQueries');
-const {
-  answerQuery,
-} = require('../../controllers/hospitalAdmin/query/answerQuery');
+    getAllPendingQueries,
+} = require('../../controllers/query/getAllPendingQueries');
+const { answerQuery } = require('../../controllers/query/answerQuery');
 // const {
 //   getQueryById,
 // } = require('../../controllers/patient/query/getQueryById');
 // const loginUser = require('../controllers/users/loginUser');
-// const { ensureToken } = require('../utils/jwtUtils');
+const { ensureToken } = require('../../utils/jwtUtils');
 
 const router = express.Router();
 
 // router.get('/category', getAllCategory);
 
 //---------------
-router.get('/', getAllPendingQueries);
-router.post('/answered/:id', answerQuery);
+router.get('/', ensureToken(['query:get']), getAllPendingQueries);
+router.put('/answered/:id', ensureToken(['query:put']), answerQuery);
 //---------------
 
 // router.delete('/:id', deleteQuery);

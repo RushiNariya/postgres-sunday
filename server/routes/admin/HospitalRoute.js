@@ -1,24 +1,22 @@
 const express = require('express');
 // const userController = require('../controllers/users/registerUser');
-const { addHospital } = require('../../controllers/admin/hospital/addHospital');
-const getAllHospitals = require('../../controllers/admin/hospital/getAllHospitals');
-const getHospitalById = require('../../controllers/admin/hospital/getHospitalById');
+const { addHospital } = require('../../controllers/hospitals/addHospital');
+const getAllHospitals = require('../../controllers/hospitals/getAllHospitals');
+const getHospitalById = require('../../controllers/hospitals/getHospitalById');
+const { editHospital } = require('../../controllers/hospitals/editHospital');
 const {
-  editHospital,
-} = require('../../controllers/admin/hospital/editHospital');
-const {
-  deleteHospital,
-} = require('../../controllers/admin/hospital/deleteHospital');
+    deleteHospital,
+} = require('../../controllers/hospitals/deleteHospital');
 
-// const { ensureToken } = require('../utils/jwtUtils');
+const { ensureToken } = require('../../utils/jwtUtils');
 
 const router = express.Router();
 
 // router.get('/category', getAllCategory);
-router.get('/', getAllHospitals);
-router.post('/add', addHospital);
-router.delete('/:id', deleteHospital);
-router.put('/:id', editHospital);
-router.get('/:id', getHospitalById);
+router.get('/', ensureToken(['hospital:get']), getAllHospitals);
+router.post('/add', ensureToken(['hospital:post']), addHospital);
+router.delete('/:id', ensureToken(['hospital:delete']), deleteHospital);
+router.put('/:id', ensureToken(['hospital:put']), editHospital);
+router.get('/:id', ensureToken(['hospital:get']), getHospitalById);
 
 module.exports = router;
