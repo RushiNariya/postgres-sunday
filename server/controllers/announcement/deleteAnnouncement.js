@@ -12,7 +12,6 @@ const commonResponse = require('../../helpers/index');
  */
 
 const deleteAnnouncement = async (req, res) => {
-    
     try {
         const announcementId = parseInt(req.params.id, 10);
 
@@ -20,7 +19,7 @@ const deleteAnnouncement = async (req, res) => {
             throw new Error('announcementId not found!');
         }
 
-        const announcementQuery = `DELETE from announcements where id = '${announcementId}' RETURNING id`;
+        const announcementQuery = `update announcements set is_active = false where id = '${announcementId}' RETURNING id`;
         const announcementResult = await runQuery(announcementQuery);
 
         const output = { ...announcementResult.rows[0] };

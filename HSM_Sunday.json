@@ -1,0 +1,1878 @@
+{
+	"info": {
+		"_postman_id": "3a92dafc-c99b-4fc8-91c8-1830f74066a2",
+		"name": "New Collection Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hospitaladmin",
+			"item": [
+				{
+					"name": "addHospitalAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2MjgzNjE4MTksImV4cCI6MTYyODM2NTQxOX0.pURUfkFkYyez4RGFgrMG_rdBBT67GEr9Du-OotrmgVc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicmpAZ21haWwuY29tIiwicm9sZSI6Imhvc3BpdGFsYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhcHBvaW50bWVudDpnZXQiLCJhcHBvaW50bWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmdldCIsImFubm91bmNlbWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmRlbGV0ZSIsIm5vdGU6Z2V0IiwicXVlcnk6Z2V0IiwicXVlcnk6cG9zdCIsInF1ZXJ5OmRlbGV0ZSIsInBhdDpnZXQiLCJwYXQ6cG9zdCIsImhhZG1pbjpnZXQiLCJoYWRtaW46cG9zdCIsImhhZG1pbjpwdXQiLCJob3NwaXRhbDpnZXQiLCJob3NwaXRhbDpwdXQiLCJkb2N0b3I6Z2V0IiwiZG9jdG9yOnBvc3QiLCJkb2N0b3I6ZGVsZXRlIl0sImlhdCI6MTYyODA1ODM2OCwiZXhwIjoxNjI4MDYxOTY4fQ.d6dXGwujRSUixuH83XPv3FiUejtyQBqxVhqBDzsUOQo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "rishi",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "patel",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123abcABC_",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rushipatel9650@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "9999999990",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "10-10-2000",
+									"type": "text"
+								},
+								{
+									"key": "house",
+									"value": "rushi house",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "rajkot",
+									"type": "text"
+								},
+								{
+									"key": "pincode",
+									"value": "360005",
+									"type": "text"
+								},
+								{
+									"key": "stateId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/hadmin/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hadmin",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editHospitalAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicmpAZ21haWwuY29tIiwicm9sZSI6Imhvc3BpdGFsYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhcHBvaW50bWVudDpnZXQiLCJhcHBvaW50bWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmdldCIsImFubm91bmNlbWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmRlbGV0ZSIsIm5vdGU6Z2V0IiwicXVlcnk6Z2V0IiwicXVlcnk6ZGVsZXRlIiwicGF0OmdldCIsInBhdDpwb3N0IiwiaGFkbWluOmdldCIsImhhZG1pbjpwb3N0IiwiaGFkbWluOnB1dCIsImhvc3BpdGFsOmdldCIsImhvc3BpdGFsOnB1dCIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpkZWxldGUiLCJxdWVyeTpwdXQiXSwiaWF0IjoxNjI4MzIyNzMxLCJleHAiOjE2MjgzMjYzMzF9.pDbBcyAXBe-uJdGqb5FSTHcmsmHyEQBuC-CeB22RrZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicmpAZ21haWwuY29tIiwicm9sZSI6Imhvc3BpdGFsYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhcHBvaW50bWVudDpnZXQiLCJhcHBvaW50bWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmdldCIsImFubm91bmNlbWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmRlbGV0ZSIsIm5vdGU6Z2V0IiwicXVlcnk6Z2V0IiwicXVlcnk6cG9zdCIsInF1ZXJ5OmRlbGV0ZSIsInBhdDpnZXQiLCJwYXQ6cG9zdCIsImhhZG1pbjpnZXQiLCJoYWRtaW46cG9zdCIsImhhZG1pbjpwdXQiLCJob3NwaXRhbDpnZXQiLCJob3NwaXRhbDpwdXQiLCJkb2N0b3I6Z2V0IiwiZG9jdG9yOnBvc3QiLCJkb2N0b3I6ZGVsZXRlIl0sImlhdCI6MTYyODA1ODM2OCwiZXhwIjoxNjI4MDYxOTY4fQ.d6dXGwujRSUixuH83XPv3FiUejtyQBqxVhqBDzsUOQo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "rajesh",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "patel",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "freneyhirpara11@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "9999999990",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "10-10-2000",
+									"type": "text"
+								},
+								{
+									"key": "house",
+									"value": "my house",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "rajkot",
+									"type": "text"
+								},
+								{
+									"key": "pincode",
+									"value": "360005",
+									"type": "text"
+								},
+								{
+									"key": "stateId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/hadmin/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hadmin",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllHospitalAdmins",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsImVtYWlsIjoicmFqcGF0ZWxAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2MjgwNzQwOTIsImV4cCI6MTYyODA3NzY5Mn0.J13RhqCzf3Nty3g113HrEvOpwbZ5vgpqgZ4N-_ec8P8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicmpAZ21haWwuY29tIiwicm9sZSI6Imhvc3BpdGFsYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhcHBvaW50bWVudDpnZXQiLCJhcHBvaW50bWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmdldCIsImFubm91bmNlbWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmRlbGV0ZSIsIm5vdGU6Z2V0IiwicXVlcnk6Z2V0IiwicXVlcnk6cG9zdCIsInF1ZXJ5OmRlbGV0ZSIsInBhdDpnZXQiLCJwYXQ6cG9zdCIsImhhZG1pbjpnZXQiLCJoYWRtaW46cG9zdCIsImhhZG1pbjpwdXQiLCJob3NwaXRhbDpnZXQiLCJob3NwaXRhbDpwdXQiLCJkb2N0b3I6Z2V0IiwiZG9jdG9yOnBvc3QiLCJkb2N0b3I6ZGVsZXRlIl0sImlhdCI6MTYyODA1ODM2OCwiZXhwIjoxNjI4MDYxOTY4fQ.d6dXGwujRSUixuH83XPv3FiUejtyQBqxVhqBDzsUOQo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "dr.freney",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "patel",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "freneyhirpara11@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "9999999990",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "10-10-2000",
+									"type": "text"
+								},
+								{
+									"key": "house",
+									"value": "my house",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "rajkot",
+									"type": "text"
+								},
+								{
+									"key": "pincode",
+									"value": "360005",
+									"type": "text"
+								},
+								{
+									"key": "state_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/hadmin/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hadmin",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "doctor",
+			"item": [
+				{
+					"name": "addDoctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2Mjg0NDU0NDMsImV4cCI6MTYyODQ0OTA0M30.2I0rNdM8S548txXs4lYPOkzA67qbzmqELfT0NFYDoYw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjEsImVtYWlsIjoiZHIucmlzaGlAZ21haWwuY29tIiwicm9sZSI6Imhvc3BpdGFsYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhcHBvaW50bWVudDpnZXQiLCJhcHBvaW50bWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmdldCIsImFubm91bmNlbWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmRlbGV0ZSIsIm5vdGU6Z2V0IiwicXVlcnk6Z2V0IiwicXVlcnk6ZGVsZXRlIiwicGF0OmdldCIsInBhdDpwb3N0IiwiaGFkbWluOmdldCIsImhhZG1pbjpwb3N0IiwiaGFkbWluOnB1dCIsImhvc3BpdGFsOmdldCIsImhvc3BpdGFsOnB1dCIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpkZWxldGUiLCJxdWVyeTpwdXQiXSwiaWF0IjoxNjI4MzI1Mjc0LCJleHAiOjE2MjgzMjg4NzR9.0ChvqI42vbp1Vd5DWk0MzKDDJiqCV1lTCGDYqeWEAeI",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "popat",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "patel",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345@Mp",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "popat@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "9999999990",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "10-10-2000",
+									"type": "text"
+								},
+								{
+									"key": "house",
+									"value": "raj house",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "rajkot",
+									"type": "text"
+								},
+								{
+									"key": "pincode",
+									"value": "360005",
+									"type": "text"
+								},
+								{
+									"key": "stateId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hospital",
+									"value": "19",
+									"type": "text"
+								},
+								{
+									"key": "education",
+									"value": "mbbs",
+									"type": "text"
+								},
+								{
+									"key": "specilities",
+									"value": "heart",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/doctor/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editDoctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2Mjg0NDU0NDMsImV4cCI6MTYyODQ0OTA0M30.2I0rNdM8S548txXs4lYPOkzA67qbzmqELfT0NFYDoYw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "milan bhai",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "patel",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "milan@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "9999999990",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "10-10-2000",
+									"type": "text"
+								},
+								{
+									"key": "house",
+									"value": "my house",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "rajkot",
+									"type": "text"
+								},
+								{
+									"key": "pincode",
+									"value": "360005",
+									"type": "text"
+								},
+								{
+									"key": "stateId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hospital",
+									"value": "19",
+									"type": "text"
+								},
+								{
+									"key": "education",
+									"value": "mtech",
+									"type": "text"
+								},
+								{
+									"key": "specilities",
+									"value": "skin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/doctor/65",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor",
+								"65"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllDoctors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2Mjg0NDkwNjgsImV4cCI6MTYyODQ1MjY2OH0.HYqYKVWyZgdALMEWazOiuBxPfjqupBRdt3zAY5YiAIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDoctorById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2Mjg0NDU0NDMsImV4cCI6MTYyODQ0OTA0M30.2I0rNdM8S548txXs4lYPOkzA67qbzmqELfT0NFYDoYw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/doctor/67",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor",
+								"67"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDoctorByHospitalId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2Mjg0NDU0NDMsImV4cCI6MTYyODQ0OTA0M30.2I0rNdM8S548txXs4lYPOkzA67qbzmqELfT0NFYDoYw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/doctor/hospital/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor",
+								"hospital",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteDoctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2Mjg0NDU0NDMsImV4cCI6MTYyODQ0OTA0M30.2I0rNdM8S548txXs4lYPOkzA67qbzmqELfT0NFYDoYw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/doctor/67",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctor",
+								"67"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "patient",
+			"item": [
+				{
+					"name": "addPatient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2Mjg0NDkwNjgsImV4cCI6MTYyODQ1MjY2OH0.HYqYKVWyZgdALMEWazOiuBxPfjqupBRdt3zAY5YiAIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "rushi",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "nariya",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345@Rjp",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rjp@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "9999999990",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "10-10-2000",
+									"type": "text"
+								},
+								{
+									"key": "house",
+									"value": "my house",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "rajkot",
+									"type": "text"
+								},
+								{
+									"key": "pincode",
+									"value": "360005",
+									"type": "text"
+								},
+								{
+									"key": "stateId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "65",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "5.5",
+									"type": "text"
+								},
+								{
+									"key": "diseases",
+									"value": "heart",
+									"type": "text"
+								},
+								{
+									"key": "secondaryContactName",
+									"value": "mb",
+									"type": "text"
+								},
+								{
+									"key": "secondaryContactEmail",
+									"value": "rn@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "role_id",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/patient/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPatients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPatientById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/patient/24",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"24"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "kuldip@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "applyForgotPassword",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "rushipatel9650@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/applyforgotpassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"applyforgotpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotPassword",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "newPassword",
+									"value": "newPassw0rd123@",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/forgotpassword?_t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjMsImVtYWlsIjoicnVzaGlwYXRlbDk2NTBAZ21haWwuY29tIiwiaWF0IjoxNjI4NDExMjI2LCJleHAiOjE2Mjg0MTQ4MjZ9.2g5A2rvWNOlktGGjF6C3ojv9OzbGq3Ohzk7SORJfXyk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"forgotpassword"
+							],
+							"query": [
+								{
+									"key": "_t",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjMsImVtYWlsIjoicnVzaGlwYXRlbDk2NTBAZ21haWwuY29tIiwiaWF0IjoxNjI4NDExMjI2LCJleHAiOjE2Mjg0MTQ4MjZ9.2g5A2rvWNOlktGGjF6C3ojv9OzbGq3Ohzk7SORJfXyk"
+								},
+								{
+									"key": "token",
+									"value": "dvdds",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicmpAZ21haWwuY29tIiwicm9sZSI6Imhvc3BpdGFsYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhcHBvaW50bWVudDpnZXQiLCJhcHBvaW50bWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmdldCIsImFubm91bmNlbWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmRlbGV0ZSIsIm5vdGU6Z2V0IiwicXVlcnk6Z2V0IiwicXVlcnk6ZGVsZXRlIiwicGF0OmdldCIsInBhdDpwb3N0IiwiaGFkbWluOmdldCIsImhhZG1pbjpwb3N0IiwiaGFkbWluOnB1dCIsImhvc3BpdGFsOmdldCIsImhvc3BpdGFsOnB1dCIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpkZWxldGUiLCJxdWVyeTpwdXQiXSwiaWF0IjoxNjI4MzIyNzMxLCJleHAiOjE2MjgzMjYzMzF9.pDbBcyAXBe-uJdGqb5FSTHcmsmHyEQBuC-CeB22RrZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "haresh@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "oldPassword",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/changepassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"changepassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hospitals",
+			"item": [
+				{
+					"name": "addHospital",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2Mjg0NDkwNjgsImV4cCI6MTYyODQ1MjY2OH0.HYqYKVWyZgdALMEWazOiuBxPfjqupBRdt3zAY5YiAIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjEsImVtYWlsIjoiZHIucmlzaGlAZ21haWwuY29tIiwicm9sZSI6Imhvc3BpdGFsYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhcHBvaW50bWVudDpnZXQiLCJhcHBvaW50bWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmdldCIsImFubm91bmNlbWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmRlbGV0ZSIsIm5vdGU6Z2V0IiwicXVlcnk6Z2V0IiwicXVlcnk6ZGVsZXRlIiwicGF0OmdldCIsInBhdDpwb3N0IiwiaGFkbWluOmdldCIsImhhZG1pbjpwb3N0IiwiaGFkbWluOnB1dCIsImhvc3BpdGFsOmdldCIsImhvc3BpdGFsOnB1dCIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpkZWxldGUiLCJxdWVyeTpwdXQiXSwiaWF0IjoxNjI4MzI1Mjc0LCJleHAiOjE2MjgzMjg4NzR9.0ChvqI42vbp1Vd5DWk0MzKDDJiqCV1lTCGDYqeWEAeI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "atata",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "atata@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "contactNo",
+									"value": "9999999990",
+									"type": "text"
+								},
+								{
+									"key": "hoursOfOperation",
+									"value": "24",
+									"type": "text"
+								},
+								{
+									"key": "diseases",
+									"value": "skin",
+									"type": "text"
+								},
+								{
+									"key": "house",
+									"value": "myhouse",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "rajkot",
+									"type": "text"
+								},
+								{
+									"key": "pincode",
+									"value": "360005",
+									"type": "text"
+								},
+								{
+									"key": "stateId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "27",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "http://localhost:5000/hospital/add",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/hospital/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hospital",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteHospital",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2Mjg0NDkwNjgsImV4cCI6MTYyODQ1MjY2OH0.HYqYKVWyZgdALMEWazOiuBxPfjqupBRdt3zAY5YiAIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/hospital/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hospital",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editHospital",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "hospitalName",
+									"value": "new kaveri",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "newkaveri@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "contactNo",
+									"value": "9999999990",
+									"type": "text"
+								},
+								{
+									"key": "hoursOfOperation",
+									"value": "24",
+									"type": "text"
+								},
+								{
+									"key": "diseases",
+									"value": "heart",
+									"type": "text"
+								},
+								{
+									"key": "house",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "street",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "rajkot",
+									"type": "text"
+								},
+								{
+									"key": "pincode",
+									"value": "389098",
+									"type": "text"
+								},
+								{
+									"key": "state_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/hospital/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hospital",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHospitalById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2Mjg0NDkwNjgsImV4cCI6MTYyODQ1MjY2OH0.HYqYKVWyZgdALMEWazOiuBxPfjqupBRdt3zAY5YiAIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/hospital/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hospital",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllHospitals",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicnVzaGlAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOlsibm90ZTpnZXQiLCJub3RlOnBvc3QiLCJub3RlOmRlbGV0ZSIsImhhZG1pbjpwb3N0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cG9zdCIsImhvc3BpdGFsOnB1dCIsImhvc3BpdGFsOmRlbGV0ZSIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpwdXQiLCJkb2N0b3I6ZGVsZXRlIiwiaGFkbWluOmdldCJdLCJpYXQiOjE2Mjg0NDkwNjgsImV4cCI6MTYyODQ1MjY2OH0.HYqYKVWyZgdALMEWazOiuBxPfjqupBRdt3zAY5YiAIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/hospital",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hospital"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "query",
+			"item": [
+				{
+					"name": "addQuery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjgsImVtYWlsIjoicmpwQGdtYWlsLmNvbSIsInJvbGUiOiJwYXRpZW50IiwicGVybWlzc2lvbnMiOlsiYXBwb2ludG1lbnQ6ZGVsZXRlIiwiYXBwb2ludG1lbnQ6cG9zdCIsImFwcG9pbnRtZW50OmdldCIsIm5vdGU6Z2V0IiwicXVlcnk6ZGVsZXRlIiwicXVlcnk6cG9zdCIsInF1ZXJ5OmdldCIsInBhdDpwdXQiLCJwYXQ6Z2V0IiwiaG9zcGl0YWw6Z2V0IiwiZG9jdG9yOmdldCJdLCJpYXQiOjE2Mjg0NTE0MzcsImV4cCI6MTYyODQ1NTAzN30.UzlDdtcmHOwd4ZHvmaUaVzBHEbZwF8vdxDBRuPmkjuE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjksImVtYWlsIjoicGJwQGdtYWlsLmNvbSIsInJvbGUiOiJwYXRpZW50IiwicGVybWlzc2lvbnMiOlsicXVlcnk6cG9zdCIsInF1ZXJ5OmRlbGV0ZSIsInBhdDpwdXQiLCJwYXQ6Z2V0IiwiYXBwb2ludG1lbnQ6cG9zdCJdLCJpYXQiOjE2Mjc5OTQyODAsImV4cCI6MTYyNzk5Nzg4MH0.vK2sB02Gs-s_6Afdm8ZnFD3qsxiFR4hy3RqV3qT9XKA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "query",
+									"value": "freney query",
+									"type": "text"
+								},
+								{
+									"key": "hospitalId",
+									"value": "19",
+									"type": "text"
+								},
+								{
+									"key": "doctor_needed",
+									"value": "true",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "doctor_id",
+									"value": "22",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/patient/query/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"query",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getQueries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjgsImVtYWlsIjoicmpwQGdtYWlsLmNvbSIsInJvbGUiOiJwYXRpZW50IiwicGVybWlzc2lvbnMiOlsiYXBwb2ludG1lbnQ6ZGVsZXRlIiwiYXBwb2ludG1lbnQ6cG9zdCIsImFwcG9pbnRtZW50OmdldCIsIm5vdGU6Z2V0IiwicXVlcnk6ZGVsZXRlIiwicXVlcnk6cG9zdCIsInF1ZXJ5OmdldCIsInBhdDpwdXQiLCJwYXQ6Z2V0IiwiaG9zcGl0YWw6Z2V0IiwiZG9jdG9yOmdldCJdLCJpYXQiOjE2Mjg0NTE0MzcsImV4cCI6MTYyODQ1NTAzN30.UzlDdtcmHOwd4ZHvmaUaVzBHEbZwF8vdxDBRuPmkjuE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/patient/query",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPendingQueries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsImVtYWlsIjoia3VsZGlwQGdtYWlsLmNvbSIsInJvbGUiOiJob3NwaXRhbGFkbWluIiwicGVybWlzc2lvbnMiOlsiYXBwb2ludG1lbnQ6Z2V0IiwiYXBwb2ludG1lbnQ6cG9zdCIsImFubm91bmNlbWVudDpnZXQiLCJhbm5vdW5jZW1lbnQ6cG9zdCIsImFubm91bmNlbWVudDpkZWxldGUiLCJub3RlOmdldCIsInF1ZXJ5OmdldCIsInF1ZXJ5OnBvc3QiLCJxdWVyeTpkZWxldGUiLCJwYXQ6Z2V0IiwicGF0OnBvc3QiLCJoYWRtaW46Z2V0IiwiaGFkbWluOnBvc3QiLCJoYWRtaW46cHV0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cHV0IiwiZG9jdG9yOmdldCIsImRvY3Rvcjpwb3N0IiwiZG9jdG9yOmRlbGV0ZSJdLCJpYXQiOjE2Mjg0NTI2MDAsImV4cCI6MTYyODQ1NjIwMH0.yMflHL2IyOT5xGSKq4h9Me0EmEPkH-w6zy96VC_B12E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/hadmin/query",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hadmin",
+								"query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "answerQuery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTksImVtYWlsIjoiaGFyZXNoQGdtYWlsLmNvbSIsInJvbGUiOiJkb2N0b3IiLCJwZXJtaXNzaW9ucyI6WyJhcHBvaW50bWVudDpnZXQiLCJhbm5vdW5jZW1lbnQ6Z2V0IiwiYW5ub3VuY2VtZW50OmRlbGV0ZSIsIm5vdGU6Z2V0IiwicXVlcnk6Z2V0IiwicXVlcnk6cHV0IiwicGF0OmdldCIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cHV0Il0sImlhdCI6MTYyODA4MTQzNiwiZXhwIjoxNjI4MDg1MDM2fQ.ieGu97zqdh53Plu-vFbP58B8VWz9kPk5mKkkCqeSRWM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "answer",
+									"value": "doctor has answered now",
+									"type": "text"
+								},
+								{
+									"key": "doctor_needed",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "doctor_id",
+									"value": "59",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/hadmin/query/answered/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hadmin",
+								"query",
+								"answered",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteQuery",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/patient/query/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"query",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getQueryById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsImVtYWlsIjoia3VsZGlwQGdtYWlsLmNvbSIsInJvbGUiOiJob3NwaXRhbGFkbWluIiwicGVybWlzc2lvbnMiOlsiYXBwb2ludG1lbnQ6Z2V0IiwiYXBwb2ludG1lbnQ6cG9zdCIsImFubm91bmNlbWVudDpnZXQiLCJhbm5vdW5jZW1lbnQ6cG9zdCIsImFubm91bmNlbWVudDpkZWxldGUiLCJub3RlOmdldCIsInF1ZXJ5OmdldCIsInF1ZXJ5OnBvc3QiLCJxdWVyeTpkZWxldGUiLCJwYXQ6Z2V0IiwicGF0OnBvc3QiLCJoYWRtaW46Z2V0IiwiaGFkbWluOnBvc3QiLCJoYWRtaW46cHV0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cHV0IiwiZG9jdG9yOmdldCIsImRvY3Rvcjpwb3N0IiwiZG9jdG9yOmRlbGV0ZSJdLCJpYXQiOjE2Mjg0NTI2MDAsImV4cCI6MTYyODQ1NjIwMH0.yMflHL2IyOT5xGSKq4h9Me0EmEPkH-w6zy96VC_B12E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/patient/query/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"query",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "announcement",
+			"item": [
+				{
+					"name": "addAnnouncement",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsImVtYWlsIjoia3VsZGlwQGdtYWlsLmNvbSIsInJvbGUiOiJob3NwaXRhbGFkbWluIiwicGVybWlzc2lvbnMiOlsiYXBwb2ludG1lbnQ6Z2V0IiwiYXBwb2ludG1lbnQ6cG9zdCIsImFubm91bmNlbWVudDpnZXQiLCJhbm5vdW5jZW1lbnQ6cG9zdCIsImFubm91bmNlbWVudDpkZWxldGUiLCJub3RlOmdldCIsInF1ZXJ5OmdldCIsInF1ZXJ5OnBvc3QiLCJxdWVyeTpkZWxldGUiLCJwYXQ6Z2V0IiwicGF0OnBvc3QiLCJoYWRtaW46Z2V0IiwiaGFkbWluOnBvc3QiLCJoYWRtaW46cHV0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cHV0IiwiZG9jdG9yOmdldCIsImRvY3Rvcjpwb3N0IiwiZG9jdG9yOmRlbGV0ZSJdLCJpYXQiOjE2Mjg0NDQ5NjAsImV4cCI6MTYyODQ0ODU2MH0.EQkS-x34gFX20hDNMh1OEDzv36TS2bT2iYjDZJbz5ks",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "first",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "my first announcement",
+									"type": "text"
+								},
+								{
+									"key": "hospital_admin_id",
+									"value": "18",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/announcement/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"announcement",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAnnouncements",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsImVtYWlsIjoia3VsZGlwQGdtYWlsLmNvbSIsInJvbGUiOiJob3NwaXRhbGFkbWluIiwicGVybWlzc2lvbnMiOlsiYXBwb2ludG1lbnQ6Z2V0IiwiYXBwb2ludG1lbnQ6cG9zdCIsImFubm91bmNlbWVudDpnZXQiLCJhbm5vdW5jZW1lbnQ6cG9zdCIsImFubm91bmNlbWVudDpkZWxldGUiLCJub3RlOmdldCIsInF1ZXJ5OmdldCIsInF1ZXJ5OnBvc3QiLCJxdWVyeTpkZWxldGUiLCJwYXQ6Z2V0IiwicGF0OnBvc3QiLCJoYWRtaW46Z2V0IiwiaGFkbWluOnBvc3QiLCJoYWRtaW46cHV0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cHV0IiwiZG9jdG9yOmdldCIsImRvY3Rvcjpwb3N0IiwiZG9jdG9yOmRlbGV0ZSJdLCJpYXQiOjE2Mjg0NDQ5NjAsImV4cCI6MTYyODQ0ODU2MH0.EQkS-x34gFX20hDNMh1OEDzv36TS2bT2iYjDZJbz5ks",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/announcement",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"announcement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAnnouncement",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcsImVtYWlsIjoia3VsZGlwQGdtYWlsLmNvbSIsInJvbGUiOiJob3NwaXRhbGFkbWluIiwicGVybWlzc2lvbnMiOlsiYXBwb2ludG1lbnQ6Z2V0IiwiYXBwb2ludG1lbnQ6cG9zdCIsImFubm91bmNlbWVudDpnZXQiLCJhbm5vdW5jZW1lbnQ6cG9zdCIsImFubm91bmNlbWVudDpkZWxldGUiLCJub3RlOmdldCIsInF1ZXJ5OmdldCIsInF1ZXJ5OnBvc3QiLCJxdWVyeTpkZWxldGUiLCJwYXQ6Z2V0IiwicGF0OnBvc3QiLCJoYWRtaW46Z2V0IiwiaGFkbWluOnBvc3QiLCJoYWRtaW46cHV0IiwiaG9zcGl0YWw6Z2V0IiwiaG9zcGl0YWw6cHV0IiwiZG9jdG9yOmdldCIsImRvY3Rvcjpwb3N0IiwiZG9jdG9yOmRlbGV0ZSJdLCJpYXQiOjE2Mjg0NDQ5NjAsImV4cCI6MTYyODQ0ODU2MH0.EQkS-x34gFX20hDNMh1OEDzv36TS2bT2iYjDZJbz5ks",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/announcement/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"announcement",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getQueryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/patient/query/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"query",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "appointment",
+			"item": [
+				{
+					"name": "addAppointment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjgsImVtYWlsIjoicmpAZ21haWwuY29tIiwicm9sZSI6Imhvc3BpdGFsYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJhcHBvaW50bWVudDpnZXQiLCJhcHBvaW50bWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmdldCIsImFubm91bmNlbWVudDpwb3N0IiwiYW5ub3VuY2VtZW50OmRlbGV0ZSIsIm5vdGU6Z2V0IiwicXVlcnk6Z2V0IiwicXVlcnk6ZGVsZXRlIiwicGF0OmdldCIsInBhdDpwb3N0IiwiaGFkbWluOmdldCIsImhhZG1pbjpwb3N0IiwiaGFkbWluOnB1dCIsImhvc3BpdGFsOmdldCIsImhvc3BpdGFsOnB1dCIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cG9zdCIsImRvY3RvcjpkZWxldGUiLCJxdWVyeTpwdXQiXSwiaWF0IjoxNjI4MzI3NjUxLCJleHAiOjE2MjgzMzEyNTF9.l1flVOx-ie4TJzH5FK_3D4Qb95L9KgyOms1K5Qae_jc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "rushinariya22@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "hospital_id",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "doctor_id",
+									"value": "59",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "9999990909",
+									"type": "text"
+								},
+								{
+									"key": "appointment_date",
+									"value": "11-11-2021",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "09:00 AM",
+									"type": "text"
+								},
+								{
+									"key": "end_time",
+									"value": "11:00 AM",
+									"type": "text"
+								},
+								{
+									"key": "followup",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/hadmin/appointment/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"hadmin",
+								"appointment",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAppointmentsByPatient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTgsImVtYWlsIjoicnVzaGluYXJpeWEyMkBnbWFpbC5jb20iLCJyb2xlIjoicGF0aWVudCIsInBlcm1pc3Npb25zIjpbIm5vdGU6Z2V0IiwicXVlcnk6Z2V0IiwicXVlcnk6cG9zdCIsInF1ZXJ5OmRlbGV0ZSIsInBhdDpnZXQiLCJwYXQ6cHV0IiwiaG9zcGl0YWw6Z2V0IiwiZG9jdG9yOmdldCIsImFwcG9pbnRtZW50OmdldCIsImFwcG9pbnRtZW50OnBvc3QiLCJhcHBvaW50bWVudDpkZWxldGUiXSwiaWF0IjoxNjI4MDc4NDE0LCJleHAiOjE2MjgwODIwMTR9.AFj22DDFgji3GVzh7DQdlIXmRW9AAsHEOqYiaPuHrlA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/patient/appointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"patient",
+								"appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAppointmentsByDoctor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTksImVtYWlsIjoiaGFyZXNoQGdtYWlsLmNvbSIsInJvbGUiOiJkb2N0b3IiLCJwZXJtaXNzaW9ucyI6WyJhcHBvaW50bWVudDpnZXQiLCJhbm5vdW5jZW1lbnQ6Z2V0IiwiYW5ub3VuY2VtZW50OmRlbGV0ZSIsIm5vdGU6Z2V0IiwicXVlcnk6Z2V0IiwicXVlcnk6cHV0IiwicGF0OmdldCIsImRvY3RvcjpnZXQiLCJkb2N0b3I6cHV0Il0sImlhdCI6MTYyODA4MDQzMCwiZXhwIjoxNjI4MDg0MDMwfQ.EqZDqLmVHn37pPqIzQG77l78rqxC4Ac83vdPC-Qrphg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/doctors/appointments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"doctors",
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "generalnotes",
+			"item": [
+				{
+					"name": "addNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTUsImVtYWlsIjoiZGhpcmVucGF0ZWxAZ21haWwuY29tIiwicm9sZSI6ImRvY3RvciIsInBlcm1pc3Npb25zIjpbImFwcG9pbnRtZW50OmdldCIsImFubm91bmNlbWVudDpnZXQiLCJhbm5vdW5jZW1lbnQ6ZGVsZXRlIiwibm90ZTpnZXQiLCJxdWVyeTpnZXQiLCJxdWVyeTpwdXQiLCJwYXQ6Z2V0IiwiZG9jdG9yOmdldCIsImRvY3RvcjpwdXQiXSwiaWF0IjoxNjI4MDYzNDE5LCJleHAiOjE2MjgwNjcwMTl9.-z-YiVCMsNgoqSTaKGesHRgDmq7WcCFlt9l7gxf6-W8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "rushi",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "rushi nariyais here",
+									"type": "text"
+								},
+								{
+									"key": "admin_id",
+									"value": "23",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/notes/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"notes",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteNotes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/notes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"notes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllNotes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"notes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

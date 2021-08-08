@@ -17,7 +17,7 @@ const deleteQuery = async (req, res) => {
             throw new Error('queryId not found!');
         }
 
-        const concernQuery = `DELETE from query_concerns where id = '${queryId}' RETURNING id`;
+        const concernQuery = `update query_concerns is_deleted=true where id = '${queryId}' RETURNING id`;
         const concernResult = await runQuery(concernQuery);
 
         const output = { ...concernResult.rows[0] };

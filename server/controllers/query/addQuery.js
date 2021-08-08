@@ -25,7 +25,7 @@ const addQuery = async (req, res) => {
     try {
         if (validateQueryBody(req.body)) {
             const { query, hospitalId } = req.body;
-            const patientId = 24;
+            const patientId = req.user.id;
 
             const concernQuery = `insert into query_concerns (patient_id, query, hospital_id) values('${patientId}', '${query}', '${hospitalId}') RETURNING id`;
             const concernResult = await runQuery(concernQuery);

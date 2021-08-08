@@ -3,7 +3,9 @@ const express = require('express');
 const { addQuery } = require('../../controllers/query/addQuery');
 const { getAllQueries } = require('../../controllers/query/getQueries');
 const { deleteQuery } = require('../../controllers/query/deleteQuery');
-const { getQueryById } = require('../../controllers/query/getQueryById');
+const {
+    getQueryByIdForPatient,
+} = require('../../controllers/query/getQueryByIdForPatient');
 // const loginUser = require('../controllers/users/loginUser');
 const { ensureToken } = require('../../utils/jwtUtils');
 
@@ -16,6 +18,6 @@ const router = express.Router();
 router.get('/', ensureToken(['query:get']), getAllQueries);
 router.post('/add', ensureToken('query:post'), addQuery);
 router.delete('/:id', ensureToken(['query:delete']), deleteQuery);
-router.get('/:id', ensureToken(['query:get']), getQueryById);
+router.get('/:id', ensureToken(['query:get']), getQueryByIdForPatient);
 //---------------
 module.exports = router;

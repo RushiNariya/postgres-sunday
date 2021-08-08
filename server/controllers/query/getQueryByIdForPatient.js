@@ -10,14 +10,14 @@ const commonResponse = require('../../helpers/index');
  * @throws {Query not found!} When Query not found
  */
 
-const getQueryById = async (req, res) => {
+const getQueryByIdForPatient = async (req, res) => {
     try {
         const queryId = parseInt(req.params.id, 10);
 
         if (!queryId) {
             throw new Error('queryId not found!');
         }
-        const concernQuery = `select q.id, q.query, q.answer, h.name as hospital_name, h.email as hospital_email, concat(u.firstname, ' ', u.lastname) as doctor_name, u.email as doctor_email from query_concerns q join patients p on q.patient_id = p.user_id join hospitals h on q.hospital_id = h.id join users u on q.doctor_id = u.id where q.id='${queryId}'`;
+        const concernQuery = `select q.id, q.query, q.answer, h.name as hospital_name, h.email as hospital_email, concat(u.firstname, ' ', u.lastname) as patient_name, u.email as patient_email from query_concerns q join patients p on q.patient_id = p.user_id and q.id='${queryId}' and q.is_deleted = false join hospitals h on q.hospital_id = h.id join users u on q.patient_id = u.id`;
         const concernResult = await runQuery(concernQuery);
 
         if (concernResult.rowCount === 0) {
@@ -31,4 +31,4 @@ const getQueryById = async (req, res) => {
     }
 };
 
-module.exports = { getQueryById };
+module.exports = { getQueryByIdForPatient };

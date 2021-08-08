@@ -3,6 +3,9 @@ const express = require('express');
 const {
     getAllPendingQueries,
 } = require('../../controllers/query/getAllPendingQueries');
+const {
+    getQueryByIdForhospitalAdmin,
+} = require('../../controllers/query/getQueryByIdForhospitalAdmin');
 const { answerQuery } = require('../../controllers/query/answerQuery');
 // const {
 //   getQueryById,
@@ -16,6 +19,7 @@ const router = express.Router();
 
 //---------------
 router.get('/', ensureToken(['query:get']), getAllPendingQueries);
+router.get('/:id', ensureToken(['query:get']), getQueryByIdForhospitalAdmin);
 router.put('/answered/:id', ensureToken(['query:put']), answerQuery);
 //---------------
 

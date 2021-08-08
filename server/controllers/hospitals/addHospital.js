@@ -15,7 +15,8 @@ const validateHospitalBody = (body) => {
         !body.street ||
         !body.city ||
         !body.pincode ||
-        !body.stateId
+        !body.stateId ||
+        !body.userId
     ) {
         return false;
     }
@@ -37,6 +38,7 @@ const validateHospitalBody = (body) => {
  * @param {String} city - hospital city
  * @param {number} pincode - hospital pincode
  * @param {number} stateId - hospital state choosen
+ * @param {number} userId - hospital admin choosen
  * @returns {commonResponse} response with status code
  * @throws {All the fields are required!} When hospital data not added sufficiently.
  */
@@ -57,9 +59,10 @@ const addHospital = async (req, res) => {
                 city,
                 pincode,
                 stateId,
+                userId,
             } = req.body;
 
-            const userId = req.user.id;
+            // const userId = req.user.id;
 
             // client = await pool.connect();
 

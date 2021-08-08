@@ -64,6 +64,10 @@ const editDoctor = async (req, res) => {
                 specilities,
             } = req.body;
 
+            // if(!(req.user.role === 'admin' || req.user.role === 'doctor')){
+            //     throw new Error('you are not ');
+            // }
+
             const doctorId = parseInt(req.params.id, 10);
 
             if (!doctorId) {
@@ -81,7 +85,7 @@ const editDoctor = async (req, res) => {
                 throw new Error('user not updated correctly!');
             }
 
-            const doctorQuery = `update doctors set hospital_id = '${hospital}', education= '${education}', specialities= '${specilities}' where user_id = '${doctorId} RETURNING user_id '`;
+            const doctorQuery = `update doctors set hospital_id = '${hospital}', education= '${education}', specialities= '${specilities}' where user_id = '${doctorId}' RETURNING user_id`;
             const doctorResult = await client.query(doctorQuery);
 
             const addressQuery = `update address set house ='${house}', street ='${street}', city='${city}', pincode='${pincode}', state_id='${stateId}' where id = '${userResult.rows[0].address_id}'  RETURNING id`;
@@ -95,6 +99,7 @@ const editDoctor = async (req, res) => {
         }
         throw new Error('Please fill all the required fields!');
     } catch (err) {
+        console.log(err);
         await client.query('ROLLBACK');
         return commonResponse(res, 200, null, err.message);
     } finally {

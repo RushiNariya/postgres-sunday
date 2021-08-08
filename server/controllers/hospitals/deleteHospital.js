@@ -28,18 +28,21 @@ const deleteHospital = async (req, res) => {
         if (hospitalResult.rowCount === 0) {
             throw new Error('hospital not found!');
         }
-        const hospitalAdminQuery = `DELETE from hospital_admins where hospital_id = '${hospitalId}'`;
-        const hospitalAdminResult = await client.query(hospitalAdminQuery);
-
-        const deleteHospitalQuery = `DELETE from hospitals where id = '${hospitalId}' RETURNING address_id, id`;
+        const deleteHospitalQuery = `update hospitals set is_active = false where id = '${hospitalId}' RETURNING address_id, id`;
         const deleteHospitalResult = await client.query(deleteHospitalQuery);
 
-        if (deleteHospitalResult.rowCount === 0) {
-            throw new Error('hospital not found!');
-        }
+        // const hospitalAdminQuery = `DELETE from hospital_admins where hospital_id = '${hospitalId}'`;
+        // const hospitalAdminResult = await client.query(hospitalAdminQuery);
 
-        const addressQuery = `DELETE from address where id = '${deleteHospitalResult.rows[0].address_id}' RETURNING id`;
-        const addressResult = await client.query(addressQuery);
+        // const deleteHospitalQuery = `DELETE from hospitals where id = '${hospitalId}' RETURNING address_id, id`;
+        // const deleteHospitalResult = await client.query(deleteHospitalQuery);
+
+        // if (deleteHospitalResult.rowCount === 0) {
+        //     throw new Error('hospital not found!');
+        // }
+
+        // const addressQuery = `DELETE from address where id = '${deleteHospitalResult.rows[0].address_id}' RETURNING id`;
+        // const addressResult = await client.query(addressQuery);
 
         await client.query('COMMIT');
 

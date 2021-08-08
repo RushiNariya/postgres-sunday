@@ -9,7 +9,7 @@ const commonResponse = require('../../helpers/index');
  */
 const getAllHospitals = async (req, res) => {
     try {
-        const hospitalQuery = `select h.name, h.email, h.contact_no, h.diseases, h.hours_of_operation, h.website, a.city, a.pincode from hospitals h join address a on h.address_id = a.id`;
+        const hospitalQuery = `select h.name, h.email, h.contact_no, h.diseases, h.hours_of_operation, h.website, a.city, a.pincode from hospitals h join address a on h.address_id = a.id where h.is_active = true`;
         const hospitalResult = await runQuery(hospitalQuery);
 
         const output = hospitalResult.rows;
